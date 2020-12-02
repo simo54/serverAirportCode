@@ -15,11 +15,19 @@ app.use((req, res, next) => {
 // Getting airport code and return json of the filtered result
 app.get("/:code", (req, res) => {
   const { code } = req.params;
+
   const check = file.filter((data) => {
     return data.iata_code == code;
   }); 
+
   res.json(check);
 });
+
+
+
+
+
+
 
 // Server listening
 app.listen(8000, () => {
