@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3000;
 const bodyParser = require("body-parser");
 const file = require("./data.json");
 
@@ -30,6 +30,6 @@ app.get("/:code", (req, res) => {
 
 
 // Server listening
-app.listen(8000, () => {
+app.listen(port, () => {
   console.log("Server running on port " + port);
 });
